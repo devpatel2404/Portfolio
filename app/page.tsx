@@ -1,48 +1,66 @@
 'use client'
-import Image from "next/image";
-import {useEffect, useState} from "react";
-import {element} from "prop-types";
+import {useState} from "react";
 
 export default function Home() {
     let [scheme, setScheme] = useState('');
 
     const changeLight = () => {
+        // @ts-ignore
         document.getElementById("Background").style.backgroundColor = "white";
+        // @ts-ignore
         document.getElementById("Background").style.color = 'black';
         setScheme("Light");
     };
 
     const changeDark = () => {
+        // @ts-ignore
         document.getElementById("Background").style.backgroundColor = "black";
+        // @ts-ignore
         document.getElementById("Background").style.color = 'white';
         setScheme("Dark");
     };
 
     const Home = () => {
+        // @ts-ignore
         document.getElementById("AboutMe").hidden = true;
+        // @ts-ignore
         document.getElementById("Projects").hidden = true;
+        // @ts-ignore
         document.getElementById("Contact").hidden = true;
+        // @ts-ignore
         document.getElementById("Home").hidden = false;
     }
 
     const AboutMe = () => {
+        // @ts-ignore
         document.getElementById("Projects").hidden = true;
+        // @ts-ignore
         document.getElementById("Contact").hidden = true;
+        // @ts-ignore
         document.getElementById("Home").hidden = true;
+        // @ts-ignore
         document.getElementById("AboutMe").hidden = false;
     }
 
     const Projects = () => {
+        // @ts-ignore
         document.getElementById("AboutMe").hidden = true;
+        // @ts-ignore
         document.getElementById("Contact").hidden = true;
+        // @ts-ignore
         document.getElementById("Home").hidden = true;
+        // @ts-ignore
         document.getElementById("Projects").hidden = false;
     }
 
     const Contact = () => {
+        // @ts-ignore
         document.getElementById("AboutMe").hidden = true;
+        // @ts-ignore
         document.getElementById("Projects").hidden = true;
+        // @ts-ignore
         document.getElementById("Home").hidden = true;
+        // @ts-ignore
         document.getElementById("Contact").hidden = false;
     }
 
