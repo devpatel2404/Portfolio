@@ -2,45 +2,103 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-  font-family: Arial;
+@media (prefers-color-scheme: light) {
+  .light-theme {
+    --primary: white;
+    --secondary: black;
+    --outline: #d3d3d3;
+  }
 }
-
 
 @media (prefers-color-scheme: dark) {
-  main {
-    background-color: black;
-    color: white;
+  .dark-theme {
+    --primary: black;
+    --secondary : white;
+    --outline: white;
   }
 }
 
-@media (prefers-color-scheme: light) {
-  main {
-    background-color: white;
-    color: black;
-  }
+.light-theme {
+  --primary: white;
+  --secondary: black;
+  --outline: #d3d3d3;
 }
 
-@media (max-width: 499px) {
-  .Container {
-    width: 80vw;
-    margin: auto;
-  }
-  .Options {
-    font-size: medium;
-  }
+.dark-theme {
+  --primary: black;
+  --secondary : white;
+  --outline: white;
 }
 
-@media (min-width: 500px) and (max-width: 999px)  {
-  .Container {
-    width: 90vw;
-    margin: auto;
-  }
+.Futura {
+  --font-family: Futura;
+  font-family: Futura;
 }
 
-@media (min-width: 1000px){
-  .Container {
-    width: 93vw;
-    margin: auto;
-  }
+.Comic {
+  --font-family: Baskerville;
+  font-family: Baskerville;
+}
+
+.Mono {
+  --font-family: "RobotoMono Nerd Font";
+  font-family: "RobotoMono Nerd Font";
+}
+
+main {
+  background: var(--primary);
+  color: var(--secondary);
+}
+
+.Information {
+  font-family: var(--font-family);
+}
+
+.Container {
+  width: 88vw;
+  margin-left: 6vw;
+  padding-top: 3vh;
+}
+
+.Information {
+  border: 1px solid var(--outline);
+}
+
+.Light:active {
+  prefers-color-scheme: light;
+}
+
+button:hover {
+  opacity: 60%;
+}
+
+.Radio {
+  margin: auto 4px auto 8px;
+}
+
+.Options {
+  font-size: 14px;
+  transform: rotate(90deg);
+  display: flex;
+  justify-content: end;
+  width: 22px;
+  position: relative;
+  top: -2vh;
+  left: 94vw;
+}
+
+.Title {
+  text-align: center;
+  font-size: 28px;
+  margin: 16px 0 4px 0;
+}
+
+.Role {
+  text-align: center;
+  font-size: 18px;
+  margin: 4px 0 8px 0;
+}
+
+.Radio {
+  width: 10px;
 }

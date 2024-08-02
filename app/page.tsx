@@ -1,110 +1,99 @@
 'use client'
-import {useState} from "react";
+import Link from "next/link";
+import {useState, useEffect} from "react";
 
 export default function Home() {
-    let [scheme, setScheme] = useState('');
+    const [theme, setTheme] = useState(window.matchMedia(`(prefers-color-scheme: dark)`).matches ? 'dark' : 'light');
+    const [font, setFont] = useState('Futura');
+    const [tempTheme, setTempTheme] = useState(window.matchMedia(`(prefers-color-scheme: dark)`).matches ? 'dark' : 'light');
+    const [tempFont, setTempFont] = useState('Futura');
 
-    const changeLight = () => {
-        // @ts-ignore
-        document.getElementById("Background").style.backgroundColor = "white";
-        // @ts-ignore
-        document.getElementById("Background").style.color = 'black';
-        setScheme("Light");
+    useEffect(() => {
+        const mediaQuery = window.matchMedia(`(prefers-color-scheme: dark)`);
+        setTheme(mediaQuery.matches ? 'dark' : 'light');
+
+        const handleChange = (e) => {
+            setTheme(e.matches ? 'dark' : 'light');
+        }
+
+        mediaQuery.addEventListener('change', handleChange);
+
+        return () => {
+            mediaQuery.removeEventListener('change', handleChange);
+        }
+    }, []);
+
+    const handleThemeChange = (e) => {
+      setTheme(e.target.value);
     };
 
-    const changeDark = () => {
-        // @ts-ignore
-        document.getElementById("Background").style.backgroundColor = "black";
-        // @ts-ignore
-        document.getElementById("Background").style.color = 'white';
-        setScheme("Dark");
-    };
-
-    const Home = () => {
-        // @ts-ignore
-        document.getElementById("AboutMe").hidden = true;
-        // @ts-ignore
-        document.getElementById("Projects").hidden = true;
-        // @ts-ignore
-        document.getElementById("Contact").hidden = true;
-        // @ts-ignore
-        document.getElementById("Home").hidden = false;
+    const handleFontChange = (e) => {
+        setFont(e.target.value);
     }
 
-    const AboutMe = () => {
-        // @ts-ignore
-        document.getElementById("Projects").hidden = true;
-        // @ts-ignore
-        document.getElementById("Contact").hidden = true;
-        // @ts-ignore
-        document.getElementById("Home").hidden = true;
-        // @ts-ignore
-        document.getElementById("AboutMe").hidden = false;
+    const themeEnter = (e) => {
+        setTempTheme(e.target.value);
     }
 
-    const Projects = () => {
-        // @ts-ignore
-        document.getElementById("AboutMe").hidden = true;
-        // @ts-ignore
-        document.getElementById("Contact").hidden = true;
-        // @ts-ignore
-        document.getElementById("Home").hidden = true;
-        // @ts-ignore
-        document.getElementById("Projects").hidden = false;
+    const themeExit = (e) => {
+        setTempTheme('');
     }
 
-    const Contact = () => {
-        // @ts-ignore
-        document.getElementById("AboutMe").hidden = true;
-        // @ts-ignore
-        document.getElementById("Projects").hidden = true;
-        // @ts-ignore
-        document.getElementById("Home").hidden = true;
-        // @ts-ignore
-        document.getElementById("Contact").hidden = false;
+    const fontEnter = (e) => {
+        setTempFont(e.target.value);
     }
+
+    const fontExit = (e) => {
+        setTempFont('');
+    }
+
+    const appliedTheme = tempTheme || theme;
+    const appliedFont = tempFont || font;
 
     return (
-        <main className={`h-screen`} id={"Background"}>
-            <div id={"Page"}></div>
+        <main className={`h-screen ${appliedTheme}-theme`} id={"Background"}>
             <div className={"Container"}>
-                <div className={"flex justify-end pt-2 Options"}>
-                    <input type={"radio"} id={"Light"} name="Color_Schemes" className={"mr-0.5"} onClick={changeLight}
-                           defaultChecked={scheme === "Light"}/>
-                    <h1 className={"mr-1.5"}>Light</h1>
-                    <input type={"radio"} id={"Dark"} name="Color_Schemes" onClick={changeDark} className={"mr-0.5"}/>
-                    <h1 className={"mr-1.5"}>Dark</h1>
-                    <input type={"radio"} id={"Times"} name={"Fonts"} value={"Arial"} defaultChecked={true}/>
-                    <h1 className={"mr-1.5"}>Arial</h1>
-                    <input type={"radio"} id={"Times"} name={"Fonts"} value={"Helvetica"}/>
-                    <h1 className={"mr-1.5"}>Helvetica</h1>
-                    <input type={"radio"} id={"Sans"} name={"Fonts"} value={"Sans-Serif"}/><h1>Mono</h1>
-                </div>
-                <div
-                    className={`font-sans text-center border-2 h-full ${scheme === "Light" ? 'border-blue-700' : "border-cyan-400"}`}
-                    style={{height: '95vh'}}>
-                    <h1 className={"mt-2 mr-2 text-4xl"}>Dev Patel</h1>
-                    <h1 className={"mt-0.5 mr-2 text-lg"}>Full Stack Engineer</h1>
+                <div className={`Information ${appliedFont}`} style={{height: '94vh'}}>
+                    <h1 className={"Title"}>Dev Patel</h1>
+                    <h1 className={"Role"}>Full Stack Engineer</h1>
                     <div className={"flex justify-center"} id={"NavBar"}>
-                        <button onClick={Home} type={"button"}><h1 className={`mr-3`}>Home</h1></button>
-                        <button onClick={AboutMe} type={"button"}><h1 className={"mr-3"}>About Me</h1></button>
-                        <button onClick={Projects} type={"button"}><h1 className={"mr-3"}>Projects</h1></button>
-                        <button onClick={Contact} type={"button"}><h1 className={""}>Contact</h1></button>
+                        <button type={"button"}><h1 className={`mr-4`}>Home</h1></button>
+                        <button type={"button"}><h1 className={"mr-4"}>About Me</h1></button>
+                        <button type={"button"}><h1 className={"mr-4"}>Projects</h1></button>
+                        <button type={"button"}><h1 className={""}>Contact</h1></button>
                     </div>
-                    <div id={"Home"} hidden={false}>
-                        <h1>Home</h1>
-                    </div>
+                    <div id={"Home"} hidden={false}></div>
                     <div id={"AboutMe"} hidden={true}>
                         <h1>About Me</h1>
                     </div>
                     <div id={"Projects"} hidden={true}>
                         <h1>Projects</h1>
+                        <Link href={"https://vitality-hub-iota.vercel.app"} target={"_blank"}>Hello</Link>
                     </div>
                     <div id={"Contact"} hidden={true}>
-                        <h1>Contact</h1>
+                        <h1>devpatel4528@gmail.com</h1>
+                        <h1>Github</h1>
+                        <h1>LinkedIn</h1>
                     </div>
                 </div>
+            </div>
+            <div className={"Options"}>
+                <input type={"radio"} className={"Radio Light"} value={'light'} name={'theme'} checked={theme === 'light'}
+                       onChange={handleThemeChange} onMouseEnter={themeEnter} onMouseLeave={themeExit} />
+                <h1 className={"Color"}>Light</h1>
+                <input type={"radio"} className={"Radio Dark"} value={'dark'} name={'theme'} checked={theme === 'dark'}
+                       onChange={handleThemeChange} onMouseEnter={themeEnter} onMouseLeave={themeExit}/>
+                <h1 className={"Color"}>Dark</h1>
 
+                <input type={"radio"} className={"Radio Arial"} defaultChecked={true} value={"Arial"} name={'Font'}
+                       onChange={handleFontChange} onMouseEnter={fontEnter} onMouseLeave={fontExit}/>
+                <h1 className={"Futura"}>Futura</h1>
+                <input type={"radio"} className={"Radio Comic"} value={"Comic"} name={'Font'}
+                       onChange={handleFontChange} onMouseEnter={fontEnter} onMouseLeave={fontExit}/>
+                <h1 className={"Baskerville"}>Baskerville</h1>
+                <input type={"radio"} className={"Radio Mono"} name={"Font"} value={"Mono"}
+                       onChange={handleFontChange} onMouseEnter={fontEnter} onMouseLeave={fontExit}/>
+                <h1 className={"Mono"}>Mono</h1>
             </div>
         </main>
     );
