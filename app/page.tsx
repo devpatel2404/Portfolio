@@ -18,10 +18,11 @@ export default function Home() {
                 setTheme(e.matches ? 'dark' : 'light');
             }
             mediaQuery.addEventListener('change', handleChange);
-        }
 
-        return () => {
-            mediaQuery.removeEventListener('change', handleChange);
+
+            return () => {
+                mediaQuery.removeEventListener('change', handleChange);
+            }
         }
     }, []);
 
