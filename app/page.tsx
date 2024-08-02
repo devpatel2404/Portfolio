@@ -1,7 +1,6 @@
 'use client'
 import Link from "next/link";
 import {useState, useEffect, ChangeEvent} from "react";
-import {green} from "next/dist/lib/picocolors";
 
 export default function Home() {
     const [theme, setTheme] = useState(window.matchMedia(`(prefers-color-scheme: dark)`).matches ? 'dark' : 'light');
@@ -11,8 +10,10 @@ export default function Home() {
     const [activeSection, setActiveSection] = useState('Home');
 
     useEffect(() => {
-        const mediaQuery = window.matchMedia(`(prefers-color-scheme: dark)`);
-        setTheme(mediaQuery.matches ? 'dark' : 'light');
+        if (typeof window !== "undefined") {
+            const mediaQuery = window.matchMedia(`(prefers-color-scheme: dark)`);
+            setTheme(mediaQuery.matches ? 'dark' : 'light');
+        }
 
         const handleChange = (e: MediaQueryListEvent) => {
             setTheme(e.matches ? 'dark' : 'light');
