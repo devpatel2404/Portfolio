@@ -13,13 +13,12 @@ export default function Home() {
         if (typeof window !== "undefined") {
             const mediaQuery = window.matchMedia(`(prefers-color-scheme: dark)`);
             setTheme(mediaQuery.matches ? 'dark' : 'light');
-        }
 
-        const handleChange = (e: MediaQueryListEvent) => {
-            setTheme(e.matches ? 'dark' : 'light');
+            const handleChange = (e: MediaQueryListEvent) => {
+                setTheme(e.matches ? 'dark' : 'light');
+            }
+            mediaQuery.addEventListener('change', handleChange);
         }
-
-        mediaQuery.addEventListener('change', handleChange);
 
         return () => {
             mediaQuery.removeEventListener('change', handleChange);
