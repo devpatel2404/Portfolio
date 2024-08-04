@@ -3,10 +3,10 @@ import Link from "next/link";
 import {useState, useEffect, ChangeEvent} from "react";
 
 export default function Home() {
-    const [theme, setTheme] = useState(window.matchMedia(`(prefers-color-scheme: dark)`).matches ? 'dark' : 'light');
+    const [theme, setTheme] = useState('dark');
     const [font, setFont] = useState('Futura');
-    const [tempTheme, setTempTheme] = useState(window.matchMedia(`(prefers-color-scheme: dark)`).matches ? 'dark' : 'light');
-    const [tempFont, setTempFont] = useState('Futura');
+    const [tempTheme, setTempTheme] = useState('');
+    const [tempFont, setTempFont] = useState('');
     const [activeSection, setActiveSection] = useState('Home');
 
     useEffect(() => {
