@@ -108,22 +108,3 @@ button:hover {
 .Mono {
   font-family: 'Mono', monospace;
 }
-
-/* Add a default font and preload */
-@font-face {
-  font-family: 'Futura';
-  src: url('/fonts/futura.woff2') format('woff2');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Baskerville';
-  src: url('/fonts/baskerville.woff2') format('woff2');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Mono';
-  src: url('/fonts/mono.woff2') format('woff2');
-  font-display: swap;
-}
