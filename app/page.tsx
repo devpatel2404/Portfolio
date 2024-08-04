@@ -59,6 +59,7 @@ export default function Home() {
 
     return (
         <main className={`h-screen ${appliedTheme}-theme`} id={"Background"}>
+            <link rel="preload" href="/fonts/futura.woff2" as="font" type="font/woff2" crossOrigin="anonymous"/>
             <div className={"Container"}>
                 <div className={`Information ${appliedFont}`} style={{height: '94vh'}}>
                     <h1 className={"Title"}>Dev Patel</h1>
@@ -89,22 +90,28 @@ export default function Home() {
                 </div>
             </div>
             <div className={"Options"}>
-                <input type={"radio"} className={"Radio Light"} value={'light'} name={'theme'} checked={theme === 'light'}
-                       onChange={handleThemeChange} onMouseEnter={() => themeEnter("light")} onMouseLeave={() => themeExit('')} />
+                <input type={"radio"} className={"Radio Light"} value={'light'} name={'theme'}
+                       checked={theme === 'light'}
+                       onChange={handleThemeChange} onMouseEnter={() => themeEnter("light")}
+                       onMouseLeave={() => themeExit('')}/>
                 <h1 className={"Color"}>Light</h1>
                 <input type={"radio"} className={"Radio Dark"} value={'dark'} name={'theme'} checked={theme === 'dark'}
-                       onChange={handleThemeChange} onMouseEnter={() => themeEnter("dark")} onMouseLeave={() => themeExit('')}/>
+                       onChange={handleThemeChange} onMouseEnter={() => themeEnter("dark")}
+                       onMouseLeave={() => themeExit('')}/>
 
                 <h1 className={"Color"}>Dark</h1>
 
                 <input type={"radio"} className={"Radio Arial"} defaultChecked={true} value={"Futura"} name={'Font'}
-                       onChange={handleFontChange} onMouseEnter={() => fontEnter("Futura")} onMouseLeave={() => fontExit('')}/>
+                       onChange={handleFontChange} onMouseEnter={() => fontEnter("Futura")}
+                       onMouseLeave={() => fontExit('')}/>
                 <h1 className={"Futura"}>Futura</h1>
                 <input type={"radio"} className={"Radio Comic"} value={"Baskerville"} name={'Font'}
-                       onChange={handleFontChange} onMouseEnter={() => fontEnter("Baskerville")} onMouseLeave={() => fontExit('')}/>
+                       onChange={handleFontChange} onMouseEnter={() => fontEnter("Baskerville")}
+                       onMouseLeave={() => fontExit('')}/>
                 <h1 className={"Baskerville"}>Baskerville</h1>
                 <input type={"radio"} className={"Radio Mono"} name={"Font"} value={"Mono"}
-                       onChange={handleFontChange} onMouseEnter={() => fontEnter("Mono")} onMouseLeave={() => fontExit('')}/>
+                       onChange={handleFontChange} onMouseEnter={() => fontEnter("Mono")}
+                       onMouseLeave={() => fontExit('')}/>
                 <h1 className={"Mono"}>Mono</h1>
             </div>
         </main>

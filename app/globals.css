@@ -10,6 +10,10 @@
   }
 }
 
+.dark-theme, .light-theme {
+  transition: background-color 3s ease;
+}
+
 @media (prefers-color-scheme: dark) {
   .dark-theme {
     --primary: black;
@@ -28,21 +32,6 @@
   --primary: black;
   --secondary : white;
   --outline: white;
-}
-
-.Futura {
-  --font-family: Futura;
-  font-family: Futura;
-}
-
-.Comic {
-  --font-family: Baskerville;
-  font-family: Baskerville;
-}
-
-.Mono {
-  --font-family: "RobotoMono Nerd Font";
-  font-family: "RobotoMono Nerd Font";
 }
 
 main {
@@ -101,4 +90,40 @@ button:hover {
 
 .Radio {
   width: 10px;
+}
+
+/* Define font styles and transitions */
+.Information {
+  transition: font-family 100s ease; /* Smooth transition for font changes */
+}
+
+.Futura {
+  font-family: 'Futura', sans-serif;
+}
+
+.Baskerville {
+  font-family: 'Baskerville', serif;
+}
+
+.Mono {
+  font-family: 'Mono', monospace;
+}
+
+/* Add a default font and preload */
+@font-face {
+  font-family: 'Futura';
+  src: url('/fonts/futura.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Baskerville';
+  src: url('/fonts/baskerville.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mono';
+  src: url('/fonts/mono.woff2') format('woff2');
+  font-display: swap;
 }
