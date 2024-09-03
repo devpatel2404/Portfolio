@@ -5,16 +5,15 @@
 }
 
 .ProjectLink {
+    display: block;
+    padding: 12px 20px;
     width: 500px;
-    padding: 10px 0;
-    margin: 12px calc(50% - 250px);
+    margin: 16px auto;
     border: 2px solid var(--outline);
+    color: white;
+    text-decoration: none;
     border-radius: 8px;
-}
-
-.ProjectLink li {
-    text-align: initial;
-    margin: 8px 20px 8px 0;
+    transition: background-color 0.3s;
 }
 
 .ProjectLink:hover {
@@ -22,8 +21,31 @@
 }
 
 .ProjectLink h1 {
-    text-align: initial;
-    margin-left: 16px;
     font-size: 20px;
-    width: 100%;
+}
+
+.ProjectLink ul {
+    padding: 0;
+    margin-left: 36px;
+}
+
+.ProjectLink li {
+    margin: 6px 0;
+    font-size: 16px;
+}
+
+.First h1 {
+    color: var(--primary-accent);
+}
+.Second h1 {
+    color: var(--secondary-accent);
+}
+.Third h1 {
+    color: var(--optional-first);
+}
+
+@media (max-width: 600px) {
+    .ProjectLink {
+        width: 90%;
+    }
 }
