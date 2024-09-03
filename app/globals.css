@@ -153,10 +153,23 @@ main::-webkit-scrollbar {
   display: none;
 }
 
+.Home {
+  position: relative;
+  top: 12px;
+  text-align: center;
+}
+
+.Home a {
+  color: var(--secondary-accent);
+}
+
 a {
   color: var(--links);
 }
 
-@media (max-width: 499px) {
-
+@media (max-height: 499px) {
+  .Options {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
 }

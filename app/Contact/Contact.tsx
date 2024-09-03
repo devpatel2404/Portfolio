@@ -1,8 +1,7 @@
 import "./Contact.css"
 import "../globals.css"
-import {ReactElement, useRef, useState} from "react";
+import React, {ReactElement, useRef, useState} from "react";
 import {EmailService} from "@/app/EmailService";
-import emailjs from "emailjs-com";
 function Contact() {
     const form = useRef<HTMLFormElement>(null);
 

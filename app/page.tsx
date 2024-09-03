@@ -1,5 +1,4 @@
 'use client'
-import Link from "next/link";
 import {useState, useEffect, ChangeEvent} from "react";
 import Contact from "./Contact/Contact";
 import AboutMe from "./AboutMe/AboutMe";
@@ -78,9 +77,10 @@ export default function Home() {
                             Contact</h1></button>
                     </div>
 
-                    <div id={"Home"} style={{display: activeSection == "Home" ? "initial" : "none", height: "96vh - 200px"}}>
-                        <h1>Welcome To My Portfolio</h1>
-                        <p>If you haven&apos;t look at my resume</p>
+                    <div id={"Home"} className={"Home"} style={{display: activeSection == "Home" ? "initial" : "none",
+                        overflowY: "auto", height: "96vh - 200p"}}>
+                        <h1 className={"Home_Title"}>Welcome To My Portfolio</h1>
+                        <p className={"Resume"}>If you haven&apos;t look at my resume <a href={"/DevPatelResume.pdf"} download={true}>Download Here</a></p>
                     </div>
 
                     {activeSection == "About" && <AboutMe />}
