@@ -78,7 +78,10 @@ export default function Home() {
                             Contact</h1></button>
                     </div>
 
-                    <div id={"Home"} style={{display: activeSection == "Home" ? "initial" : "none", height: "96vh - 200px"}}></div>
+                    <div id={"Home"} style={{display: activeSection == "Home" ? "initial" : "none", height: "96vh - 200px"}}>
+                        <h1>Welcome To My Portfolio</h1>
+                        <p>If you haven&apos;t look at my resume</p>
+                    </div>
 
                     {activeSection == "About" && <AboutMe />}
                     {activeSection == "Projects" && <Projects />}

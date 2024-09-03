@@ -6,7 +6,7 @@ import emailjs from "emailjs-com";
 function Contact() {
     const form = useRef();
 
-    const onSubmit = (e) => {
+    const onSubmit = (e : FormDataEvent) => {
         e.preventDefault();
         EmailService(form.current);
     }
