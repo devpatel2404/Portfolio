@@ -4,9 +4,9 @@ import {ReactElement, useRef, useState} from "react";
 import {EmailService} from "@/app/EmailService";
 import emailjs from "emailjs-com";
 function Contact() {
-    const form = useRef();
+    const form = useRef<HTMLFormElement>(null);
 
-    const onSubmit = (e : FormDataEvent) => {
+    const onSubmit = (e : React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         EmailService(form.current);
     }
