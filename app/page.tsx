@@ -1,6 +1,9 @@
 'use client'
 import Link from "next/link";
 import {useState, useEffect, ChangeEvent} from "react";
+import Contact from "./Contact/Contact";
+import AboutMe from "./AboutMe/AboutMe";
+import Projects from "@/app/Projects/Projects";
 
 export default function Home() {
     const [theme, setTheme] = useState('dark');
@@ -59,12 +62,12 @@ export default function Home() {
 
     return (
         <main className={`h-screen ${appliedTheme}-theme`} id={"Background"}>
-            <link rel="preload" href="/fonts/futura.woff2" as="font" type="font/woff2" crossOrigin="anonymous"/>
+
             <div className={"Container"}>
-                <div className={`Information ${appliedFont}`} style={{height: '94vh'}}>
+                <div className={`Information ${appliedFont}`} style={{height: '96vh'}}>
                     <h1 className={"Title"}>Dev Patel</h1>
                     <h1 className={"Role"}>Full Stack Engineer</h1>
-                    <div className={"flex justify-center"} id={"NavBar"}>
+                    <div className={"flex justify-center Navbar"} id={"NavBar"}>
                         <button type={"button"} onClick={() => showSection("Home")}><h1 className={`mr-4`}>
                             Home</h1></button>
                         <button type={"button"} onClick={() => showSection("About")}><h1 className={"mr-4"}>
@@ -74,19 +77,12 @@ export default function Home() {
                         <button type={"button"} onClick={() => showSection("Contact")}><h1 className={""}>
                             Contact</h1></button>
                     </div>
-                    <div id={"Home"} style={{display: activeSection == "Home" ? "initial" : "none"}}></div>
-                    <div id={"AboutMe"} style={{display: activeSection == "About" ? "block" : "none"}}>
-                        <h1>About Me</h1>
-                    </div>
-                    <div id={"Projects"} style={{display: activeSection == "Projects" ? "initial" : "none"}}>
-                        <h1>Projects</h1>
-                        <Link href={"https://vitality-hub-iota.vercel.app"} target={"_blank"}>Hello</Link>
-                    </div>
-                    <div id={"Contact"} style={{display: activeSection == "Contact" ? "initial" : "none"}}>
-                        <h1>devpatel4528@gmail.com</h1>
-                        <h1>Github</h1>
-                        <h1>LinkedIn</h1>
-                    </div>
+
+                    <div id={"Home"} style={{display: activeSection == "Home" ? "initial" : "none", height: "96vh - 200px"}}></div>
+
+                    {activeSection == "About" && <AboutMe />}
+                    {activeSection == "Projects" && <Projects />}
+                    {activeSection == "Contact" && <Contact />}
                 </div>
             </div>
             <div className={"Options"}>
@@ -98,11 +94,11 @@ export default function Home() {
                 <input type={"radio"} className={"Radio Dark"} value={'dark'} name={'theme'} checked={theme === 'dark'}
                        onChange={handleThemeChange} onMouseEnter={() => themeEnter("dark")}
                        onMouseLeave={() => themeExit('')}/>
-
                 <h1 className={"Color"}>Dark</h1>
-
-                <input type={"radio"} className={"Radio Arial"} defaultChecked={true} value={"Futura"} name={'Font'}
-                       onChange={handleFontChange} onMouseEnter={() => fontEnter("Futura")}
+                <input type={"radio"} className={"Radio Arial"} value={"Futura"}
+                       name={'Font'} defaultChecked={true}
+                       onChange={handleFontChange}
+                       onMouseEnter={() => fontEnter("Futura")}
                        onMouseLeave={() => fontExit('')}/>
                 <h1 className={"Futura"}>Futura</h1>
                 <input type={"radio"} className={"Radio Comic"} value={"Baskerville"} name={'Font'}

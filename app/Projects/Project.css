@@ -1,0 +1,29 @@
+.Projects {
+    margin: 16px auto;
+    height: calc(96vh - 200px);
+    overflow-y: auto;
+}
+
+.ProjectLink {
+    width: 500px;
+    padding: 10px 0;
+    margin: 12px calc(50% - 250px);
+    border: 2px solid var(--outline);
+    border-radius: 8px;
+}
+
+.ProjectLink li {
+    text-align: initial;
+    margin: 8px 20px 8px 0;
+}
+
+.ProjectLink:hover {
+    scale: 1.05;
+}
+
+.ProjectLink h1 {
+    text-align: initial;
+    margin-left: 16px;
+    font-size: 20px;
+    width: 100%;
+}

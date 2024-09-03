@@ -4,49 +4,72 @@
 
 @media (prefers-color-scheme: light) {
   .light-theme {
-    --primary: white;
-    --secondary: black;
+    --background: white;
+    --primary-text: #333333;
+    --secondary-text: #666666;
+    --primary-accent: #007BFF;
+    --secondary-accent: #6C757D;
     --outline: #d3d3d3;
+    --buttons: #FF5722;
+    --buttons-secondary: #F8F9FA;
   }
 }
 
 .dark-theme, .light-theme {
-  transition: background-color 3s ease;
+  transition: background-color 0.9s ease-in-out;
+}
+
+main, .Information {
+  transition: background-color 0.9s ease-in-out, color 0.9s ease-in-out, font-family 0.9s ease-in-out;
 }
 
 @media (prefers-color-scheme: dark) {
   .dark-theme {
-    --primary: black;
-    --secondary : white;
-    --outline: white;
+    --background: #1E1E1E;
+    --primary-text: #E0E0E0;
+    --secondary-text: #B0B0B0;
+    --primary-accent: #FFFFFF;
+    --secondary-accent: #757575;
+    --outline: #d3d3d3;
+    --buttons: #FF7043;
+    --buttons-secondary: #2C2C2C;
   }
 }
 
 .light-theme {
-  --primary: white;
-  --secondary: black;
+  --background: white;
+  --primary-text: #333333;
+  --secondary-text: #666666;
+  --primary-accent: #007BFF;
+  --secondary-accent: #6C757D;
   --outline: #d3d3d3;
+  --buttons: #FF5722;
+  --buttons-secondary: #F8F9FA;
 }
 
 .dark-theme {
-  --primary: black;
-  --secondary : white;
-  --outline: white;
+  --background: #1E1E1E;
+  --primary-text: #E0E0E0;
+  --secondary-text: #B0B0B0;
+  --primary-accent: #16DB93;
+  --secondary-accent: #048BA8;
+  --optional-first: #EFEA5A;
+  --outline: #d3d3d3;
+  --buttons: #FF7043;
+  --buttons-secondary: #2C2C2C;
+  --links: dodgerblue;
 }
 
 main {
-  background: var(--primary);
-  color: var(--secondary);
-}
-
-.Information {
-  font-family: var(--font-family);
+  background: var(--background);
+  color: var(--primary-text);
 }
 
 .Container {
   width: 88vw;
   margin-left: 6vw;
-  padding-top: 3vh;
+  padding-top: 2vh;
+  height: 96vh;
 }
 
 .Information {
@@ -71,30 +94,31 @@ button:hover {
   display: flex;
   justify-content: end;
   width: 22px;
-  position: relative;
-  top: -2vh;
+  bottom: 2vh;
+  position: absolute;
   left: 94vw;
 }
 
 .Title {
   text-align: center;
-  font-size: 28px;
+  font-size: 40px;
   margin: 16px 0 4px 0;
+  color: var(--primary-accent);
 }
 
 .Role {
   text-align: center;
   font-size: 18px;
   margin: 4px 0 8px 0;
+  color: var(--secondary-accent);
 }
 
 .Radio {
   width: 10px;
 }
 
-/* Define font styles and transitions */
 .Information {
-  transition: font-family 100s ease; /* Smooth transition for font changes */
+  transition: font-family 100s ease;
 }
 
 .Futura {
@@ -107,4 +131,32 @@ button:hover {
 
 .Mono {
   font-family: 'Mono', monospace;
+}
+
+p {
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 4px;
+  color: var(--secondary-text);
+}
+
+form {
+  width: 500px;
+}
+
+input {
+  border: 1px solid var(--outline);
+  color: black;
+}
+
+main::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  color: var(--links);
+}
+
+@media (max-width: 499px) {
+
 }
