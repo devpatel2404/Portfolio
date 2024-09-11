@@ -80,8 +80,8 @@ export default function Home() {
                     <div id={"Home"} className={"Home"} style={{display: activeSection == "Home" ? "initial" : "none",
                         overflowY: "auto", height: "96vh - 200p"}}>
                         <h1 className={"Home_Title"}>Welcome To My Portfolio</h1>
-                        <p className={"Resume"}>If you haven&apos;t look at my resume <a href={"/DevPatelResume.docx.pdf"} target={"_blank"}>preview it here</a>.</p>
-                        <p>Alternatively, you can  <a href={"/DevPatelResume.docx.pdf"} download={true}>download it directly</a>.</p>
+                        <p className={"Resume"}>If you haven&apos;t look at my resume <a href={"/DevPatelResume.pdf"} target={"_blank"}>preview it here</a>.</p>
+                        <p>Alternatively, you can  <a href={"/DevPatelResume.pdf"} download={true}>download it directly</a>.</p>
                     </div>
 
                     {activeSection == "About" && <AboutMe />}
