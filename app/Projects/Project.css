@@ -1,14 +1,8 @@
-.Projects {
-    margin: 16px auto;
-    height: calc(96vh - 200px);
-    overflow-y: auto;
-}
-
 .ProjectLink {
     display: block;
     padding: 12px 20px;
     width: 500px;
-    margin: 16px auto;
+    margin: 2rem auto;
     border: 2px solid var(--outline);
     color: white;
     text-decoration: none;
@@ -42,6 +36,13 @@
 }
 .Third h1 {
     color: var(--optional-first);
+}
+
+.ProjectTitle {
+    text-align: center;
+    font-size: 32px;
+    color: var(--Project-title);
+    margin-top: 48px;
 }
 
 @media (max-width: 600px) {

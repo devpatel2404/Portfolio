@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+ font-family: "Helvetica Neue";
+  scroll-behavior: smooth;
+}
+
 @media (prefers-color-scheme: light) {
   .light-theme {
     --background: white;
@@ -15,14 +20,6 @@
   }
 }
 
-.dark-theme, .light-theme {
-  transition: background-color 0.9s ease-in-out;
-}
-
-main, .Information {
-  transition: background-color 0.9s ease-in-out, color 0.9s ease-in-out, font-family 0.9s ease-in-out;
-}
-
 @media (prefers-color-scheme: dark) {
   .dark-theme {
     --background: #1E1E1E;
@@ -33,7 +30,17 @@ main, .Information {
     --outline: #d3d3d3;
     --buttons: #FF7043;
     --buttons-secondary: #2C2C2C;
+    --button-skills: #1E1E1E;
   }
+}
+
+
+.dark-theme, .light-theme {
+  transition: background-color 0.9s ease-in-out;
+}
+
+main, .Information {
+  transition: background-color 0.9s ease-in-out, color 0.9s ease-in-out;
 }
 
 .light-theme {
@@ -42,11 +49,17 @@ main, .Information {
   --secondary-text: #666666;
   --primary-accent: #007BFF;
   --secondary-accent: #6C757D;
+  --optional-first: #EFEA5A;
   --outline: #d3d3d3;
   --buttons: #FF5722;
   --buttons-secondary: #F8F9FA;
+  --links: dodgerblue;
+  --skills-section: #1C1D21;
+  --Contact-primary-accent: #564D80;
+  --Contact-secondary-accent: #EC4E20;
+  --Contact-form : #2C497F;
+  --Project-title: #F3C677;
 }
-
 .dark-theme {
   --background: #1E1E1E;
   --primary-text: #E0E0E0;
@@ -58,18 +71,50 @@ main, .Information {
   --buttons: #FF7043;
   --buttons-secondary: #2C2C2C;
   --links: dodgerblue;
+  --skills-section: #F1F7EE;
+  --Contact-primary-accent: #0ACDFF;
+  --Contact-secondary-accent: #EC4E20;
+  --Contact-form : #BF98A0;
+  --Project-title: #F3C677;
+  /*Add More Colors*/
+}
+
+.fa-moon {
+  color: black;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.fa-sun {
+  color: yellow;
+  cursor: pointer;
+  border-radius: 100px;
+}
+
+.fa-sun:hover {
+  box-shadow: inset 0px 0 8px #fffd8d, 0 0 40px yellow;
+}
+
+.fa-moon:hover {
+  box-shadow: inset 0px 0px 16px #999, 10px 10px 200px #285AEB;
+}
+
+.fa-sun:hover, .fa-moon:hover {
+  transform: scale(1.2);
+}
+
+.dark-theme .fa-moon, .light-theme .fa-sun {
+  display: none;
+}
+
+.fa-moon, .fa-sun {
+  font-size: 24px;
+  margin: auto 4px;
 }
 
 main {
   background: var(--background);
   color: var(--primary-text);
-}
-
-.Container {
-  width: 88vw;
-  margin-left: 6vw;
-  padding-top: 2vh;
-  height: 96vh;
 }
 
 .Information {
@@ -84,53 +129,36 @@ button:hover {
   opacity: 60%;
 }
 
-.Radio {
-  margin: auto 4px auto 8px;
-}
-
-.Options {
-  font-size: 14px;
-  transform: rotate(90deg);
-  display: flex;
-  justify-content: end;
-  width: 22px;
-  bottom: 2vh;
-  position: absolute;
-  left: 94vw;
-}
-
 .Title {
   text-align: center;
-  font-size: 40px;
-  margin: 16px 0 4px 0;
   color: var(--primary-accent);
+  font-size: 28px;
+  margin-left: 32px;
+  margin-right: 16px;
 }
 
 .Role {
   text-align: center;
+  color: var(--secondary-accent);
   font-size: 18px;
-  margin: 4px 0 8px 0;
+  margin: auto 0;
+}
+
+.Navigation h1 {
+  margin: auto 16px;
+  font-size: 14px;
+  color: var(--secondary-text);
+}
+
+.Navigation h1:hover {
+  background-color: var(--primary-text);
+  padding: 4px 8px;
+  border-radius: 8px;
   color: var(--secondary-accent);
 }
 
 .Radio {
   width: 10px;
-}
-
-.Information {
-  transition: font-family 100s ease;
-}
-
-.Futura {
-  font-family: 'Futura', sans-serif;
-}
-
-.Baskerville {
-  font-family: 'Baskerville', serif;
-}
-
-.Mono {
-  font-family: 'Mono', monospace;
 }
 
 p {
@@ -149,27 +177,183 @@ input {
   color: black;
 }
 
-main::-webkit-scrollbar {
-  display: none;
-}
-
-.Home {
-  position: relative;
-  top: 12px;
-  text-align: center;
-}
-
 .Home a {
-  color: var(--secondary-accent);
-}
-
-a {
   color: var(--links);
 }
 
-@media (max-height: 499px) {
-  .Options {
-    font-size: 12px;
-    margin-bottom: 4px;
+img {
+  color: var(--secondary-accent);
+}
+
+.Navbar {
+  position: fixed;
+  display: flex;
+  width: 100vw;
+}
+
+.Navigation {
+  display: flex;
+  margin-left: auto;
+  margin-right: 1rem;
+}
+
+.Skills {
+  color: var(--primary-accent);
+}
+
+ul{
+  list-style: disc;
+  margin-left: 52px;
+  color: var(--primary-text);
+}
+
+.Skills, .Hobbys_Interests{
+  font-size: 20px;
+}
+
+.WhoAmIDescription {
+  color: var(--primary-text);
+}
+
+.AboutMeTitle {
+  font-size: 32px;
+  color: var(--primary-text);
+  text-align: center;
+}
+
+.Hobbys_Interests {
+  color: var(--optional-first);
+  margin-top: 12px;
+}
+
+.About {
+  width: 600px;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+.Home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Greetings {
+  height: min(60%, 60vw);
+  margin-bottom: 1.25rem;
+}
+
+.Skills {
+  margin: 3rem auto 0 auto;
+}
+
+.SkillsContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 570px;
+  margin: 0 auto;
+}
+
+.Web-Development .SkillsContainer, .Databases .SkillsContainer, .Frameworks .SkillsContainer:last-child {
+  justify-content: space-evenly;
+}
+
+.Skills h2 {
+  font-size: 18px;
+  margin: 1rem auto;
+  color: var(--primary-text);
+}
+
+.SkillDiv {
+  width: 180px;
+  padding: 12px;
+  outline: 0.25rem solid var(--buttons-secondary);
+  border-radius: 12px;
+  margin: 0.75rem 0;
+  display: flex;
+  justify-content: center;
+  color: var(--skills-section);
+  background-color: var(--button-skills);
+  font-size: 16px;
+  align-content: center;
+}
+
+.SkillDiv i {
+  font-size: 28px;
+  margin-right: 16px;
+  color: var(--primary-text);
+}
+
+.SkillDiv h1 {
+  margin: auto 0;
+}
+
+.SkillDiv .icons {
+  width: 28px;
+  margin-right: 16px;
+  fill: var(--primary-text);
+}
+
+.SkillDiv:hover i {
+  color: var(--background);
+}
+
+.SkillDiv:hover .icons {
+  fill: var(--background);
+}
+
+.SkillDiv:hover {
+  background-color: var(--primary-text);
+  color: var(--background);
+  transform: scale(1.05);
+  transition: background-color .5s ease-in-out;
+}
+
+.FrameWorks {
+  color: var(--primary-accent);
+}
+
+.Skills {
+  font-size: 32px;
+  text-align: center;
+}
+
+.Section {
+  padding: 1.5rem 0;
+}
+
+@media (max-width: 749px) {
+  .About {
+    width: 90%;
+  }
+
+  .navlinks {
+    display: none;
+  }
+  .Title {
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .Skills {
+    width: auto;
+  }
+  .SkillsContainer {
+    width: 90vw;
+    justify-content: space-evenly;
+  }
+  .SkillDiv {
+    width: 28%;
+    font-size: 14px;
+  }
+  .SkillDiv .icons, .SkillDiv i {
+    margin-right: 8px;
+    font-size: 18px;
+  }
+  .SkillDiv .icons {
+    width: 18px;
   }
 }

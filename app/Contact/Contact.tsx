@@ -1,7 +1,10 @@
-import "./Contact.css"
+import "../Contact.css"
 import "../globals.css"
-import React, {ReactElement, useRef, useState} from "react";
+import React, {useRef} from "react";
 import {EmailService} from "@/app/EmailService";
+import {CIcon} from "@coreui/icons-react";
+import {cibLeetcode} from "@coreui/icons";
+
 function Contact() {
     const form = useRef<HTMLFormElement>(null);
 
@@ -11,56 +14,48 @@ function Contact() {
     }
 
     return (
-        <main id={"Contact"} className={"mt-3 mb-20 Contact"} style={{height: "calc(96vh - 160px)", overflowY: "auto", margin: "16px auto"}}>
+        <main id={"Contact"} className={"Contact Section"}>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
             <div>
-                <h1 className={"text-center text-2xl Contacts mb-1"}>Contact</h1>
-                <h1 className={"text-center mt-1"}>Email: <a
+                <h1 className={"text-center Contacts mb-2"}>Contact Me</h1>
+                <h1 className={"text-center mt-1"}>Email: <a className={"link"}
                     href='ma&#105;lto&#58;&#100;&#101;&#118;%7&#48;%61%7&#52;&#101;l&#52;5&#50;8%&#52;&#48;&#103;&#109;&#97;il&#37;2E&#99;&#37;6Fm'>
                     d&#101;vpa&#116;el4528&#64;&#103;mail&#46;com</a>
                 </h1>
-                <h1 className={"text-center mt-1"}>Phone Number: <a
+                <h1 className={"text-center mt-1"}>Phone Number: <a className={"link"}
                     href={"tel:848-467-2044"}>&#56;&#52;&#56;&#45;&#52;&#54;&#55;&#45;&#50;&#48;&#52;&#52;</a></h1>&#13;
             </div>
             <div>
-                <h1 className={"text-center text-2xl mt-3 Socials mb-1"}>Socials</h1>
+                <h1 className={"text-center text-2xl Socials mb-2"}>Socials</h1>
                 <div className={"flex flex-col Social"}>
                     <a href={"https://www.linkedin.com/in/dev-patel-7110072b7/"} className={"text-center mt-1"}
                        target="_blank">
-                        <i className={"fab fa-linkedin mr-2"}/>
-                        <button>
-                            LinkedIn
-                        </button>
+                        <i className={"fab fa-linkedin mr-2"}/> LinkedIn
                         <span className="wave"></span>
                     </a>
-                    <a href={"https://github.com/devpatel2404"} target="_blank">
-                        <i className={"fab fa-github mr-2"}/>
-                        <button className={"text-center mt-1"}>
-                            Github
-                        </button>
+                    <a href={"https://github.com/devpatel2404"} target="_blank" className={"github"}>
+                        <i className={"fab fa-github mr-2"}/> Github
                         <span className="wave"></span>
                     </a>
                     <a href={"https://www.instagram.com/devsp.4/"} target="_blank">
-                        <i className={"fab fa-instagram mr-2"}/>
-                        <button className={"text-center mt-1"}>
-                            Instagram
-                        </button>
+                        <i className={"fab fa-instagram mr-2"}/>Instagram
                         <span className="wave"></span>
                     </a>
                     <a href={"https://discord.gg/Gje8nyBh"} target="_blank">
-                        <i className={"fab fa-discord mr-2"}/>
-                        <button className={"text-center mt-1"}>
-                            Discord
-                        </button>
+                        <i className={"fab fa-discord mr-2"} /> Discord
+                        <span className="wave"></span>
+                    </a>
+                    <a href={"https://leetcode.com/u/devpatel2404/"} target="_blank">
+                        <CIcon icon={cibLeetcode} size={"3xl"} color={'red'} className={"leetcode"} /> LeetCode
                         <span className="wave"></span>
                     </a>
                 </div>
             </div>
             <div>
-                <h1 className={"text-center text-2xl mt-3 Form_Title"}>Connect with Me</h1>
+                <h1 className={"text-center text-2xl mb-2 Form_Title"}>Connect with Me</h1>
                 <p className={"form_Description"}>Feel free to reach out if you&apos;re interested with my work, have a
                     project in mind or simply want to chat</p>
-                <form className={"Contact_Form"} onSubmit={onSubmit} ref={form}>
+                <form className={"Contact_Form"} onSubmit={onSubmit} ref={form} autoComplete={"on"}>
                     <label className={"Name_Title"}>Your Name</label>
                     <div className={"NameContainer flex justify-between"}>
                         <div>
