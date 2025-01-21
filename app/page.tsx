@@ -51,8 +51,8 @@ export default function Home() {
                     <img src={"/obi-wan-kenobi-hello-there.gif"} className={"Greetings"}></img>
                     <h1 className={""}>Welcome To My Portfolio</h1>
                     <p className={""}>If you haven&apos;t look at my resume&nbsp;
-                        <a href={"/DevPatelResume.pdf"} target={"_blank"}>preview it here</a>.</p>
-                    <p>Alternatively, you can <a href={"/DevPatelResume.pdf"} download={true}>download it directly</a>.
+                        <a href={"/Dev Patel Resume.pdf"} target={"_blank"}>preview it here</a>.</p>
+                    <p>Alternatively, you can <a href={"/Dev Patel Resume.pdf"} download={true}>download it directly</a>.
                     </p>
                 </div>
                 <div className={"About Section"} id={"AboutMe"}>

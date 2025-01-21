@@ -1,0 +1,212 @@
+.dark-theme, .light-theme {
+    transition: background-color 0.9s ease-in-out;
+}
+.Social a {
+    outline: 2px solid var(--outline);
+    padding: 12px 0;
+    border-radius: 4px;
+    width: 430px;
+    margin: 8px auto;
+    background: var(--background);
+    text-align: center;
+    color: var(--primary-text);
+    font-size: 18px;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+}
+.fab.fa-instagram {
+    color: transparent;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+.fab.fa-linkedin {
+    color: #0072b1;
+}
+.light-theme .fa-github, .dark-theme .github:hover .fa-github {
+    color: black;
+}
+
+.dark-theme .fa-github, .light-theme .github:hover .fa-github {
+    color: white;
+}
+
+.fab.fa-discord {
+    color: #7289da;
+}
+i {
+    color: var(--secondary-accent);
+    font-size: 20px;
+}
+.Connect_Button {
+    background: var(--buttons);
+    padding: 6px 12px;
+    display: flex;
+    margin: 0px auto;
+    color: white;
+    border-radius: 4px;
+}
+.FirstNameInput, .SecondNameInput, .PhoneNumberInput, .EmailInput {
+    width: 200px;
+    padding: 2px 4px;
+    font-size: 16px;
+    margin-top: 6px;
+}
+.Name_Title {
+    margin-left: 35px;
+    font-size: 18px;
+}
+.Phone_Title, .Email_Title {
+    font-size: 18px;
+}
+.form_Description {
+    width: 430px;
+    margin: 8px auto;
+}
+
+.Contact_Form {
+    margin: auto;
+}
+
+.Contact_Description {
+    width: 430px;
+    display: flex;
+    margin: 8px auto;
+    color: black;
+    outline: 1px solid var(--outline);
+    resize: none;
+    padding: 10px;
+}
+.Form_Title {
+    color: var(--primary-accent);
+}
+
+.Socials {
+    color: var(--optional-first);
+}
+.InformationContainer {
+    width: 430px;
+    margin: 8px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Contacts {
+    color: var(--secondary-accent);
+}
+
+.NameContainer {
+    width: 430px;
+    margin: 0px auto 8px auto;
+}
+.MessageContainer {
+    width: 430px;
+    margin: 8px auto;
+}
+.InformationContainer div  {
+    width: 200px;
+}
+
+label {
+     font-size: 18px;
+}
+
+main::-webkit-scrollbar {
+    display: none;
+}
+
+.wave {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background-color: var(--primary-text);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.5s ease-in-out;
+    z-index: -1;
+}
+
+.Social a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-text);
+    text-decoration: none;
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.Social a i {
+    margin-right: 8px;
+}
+
+.Social a:hover {
+    scale: 110%;
+    color: var(--background);
+    z-index: 20;
+}
+
+.Social a:hover .wave {
+    transform: scale(calc(3/2));
+}
+
+.CIcon {
+    width: 32px;
+    margin-right: 0.5rem
+}
+
+.Contact .link {
+    color: var(--links);
+}
+
+@media (max-width: 599px) {
+    .form_Description, .Contact_Description {
+        width: 300px;
+        margin: 8px auto;
+    }
+    .Social a {
+        width: 300px;
+    }
+    .MessageContainer {
+        width: 300px;
+    }
+    .Contact_Form {
+        width: 300px;
+    }
+    .Name_Title {
+        margin: 0;
+    }
+    .NameContainer, .InformationContainer {
+        flex-direction: column;
+        display: grid;
+        margin: 4px auto;
+        width: 300px;
+    }
+    .NameContainer input, .InformationContainer input {
+        width: 300px;
+    }
+    .NameContainer div{
+        width: 300px;
+        margin: 4px auto;
+    }
+    .InformationContainer div {
+        width: 300px;
+        margin: 10px auto;
+    }
+    .NameContainer p, .InformationContainer p {
+        margin-top: 4px;
+    }
+    .NameContainer {
+        margin: 0;
+    }
+
+}
