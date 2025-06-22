@@ -1,36 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Welcome to the Repository of my Portfolio
 
-## Getting Started
+If you want to see the app visit https://devspatelportfolio.netlify.app
 
-First, run the development server:
+I’ll be making regular updates as I complete new projects or make improvements to my portfolio.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Built with Next.js and currently hosted on Netlify, this portfolio reflects my commitment to both functionality and design. Originally conceived as a minimalist, one-page layout, the portfolio has evolved over time. I wanted to create a user-friendly experience that allows visitors to easily scroll through the content while still maintaining a clean, professional look, and showcasing my skills. While focusing on a sleek design, I've also incorporated a bit of my personality and humor to make it uniquely mine.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+What you'll find in my portfolio:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Home Page – A welcoming introduction and overview, offering a quick glance at who I am and what I do, with intuitive navigation to guide you through the rest of the site.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+About Page – A deeper dive into my background, development journey, and what motivates me as a creator. I share insights into my personality, work ethic, and what I bring to every project.
 
-## Learn More
+Tech Page – A look at the tools and setup I use daily — from my MacBook and mechanical keyboard to the software and operating systems I rely on. It's a behind-the-scenes glimpse into the environment that helps me stay productive and inspired.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+If you have any questions or would like to connect, feel free to contact me via email or any of my listed contact methods. I'm always open to new opportunities and conversations.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Let me know if you'd like to adjust anything!

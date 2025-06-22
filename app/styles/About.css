@@ -1,0 +1,163 @@
+.Header {
+  font-size: 20px;
+}
+
+.Section {
+  margin: 0 0 3rem 1rem;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.Section:hover {
+  transform: scale(1.05);
+}
+
+.AboutItem {
+  margin-bottom: 0.75rem;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.AboutItem h1,
+.Project h1 {
+  font-size: 20px;
+}
+
+.AboutItem p {
+  font-size: 14px;
+  color: var(--LevelOne);
+}
+
+.Subsection {
+  margin: 0.25rem 2rem 0.25rem 14rem;
+}
+
+.AboutItem:hover h1,
+.AboutItem:hover p,
+.AboutItem:hover h2 {
+  color: var(--text);
+}
+
+.AboutItem:hover,
+.Project:hover {
+  transform: scale(1.02);
+}
+
+.ProjectDescription {
+  display: flex;
+  flex-direction: row;
+}
+
+.ProjectDescription h2 {
+  font-size: 14px;
+  color: var(--LevelOne);
+}
+
+.Icons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.ProjectIcon.TS {
+  background-color: blue;
+}
+
+.ProjectDetails {
+  width: 55%;
+}
+
+.ProjectIcons {
+  width: 45%;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.Project {
+  display: flex;
+  flex-direction: row;
+}
+
+.ProjectIcon {
+  height: 30px;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 0.75rem;
+  margin: 0.25rem 0.25rem;
+}
+
+.ProjectIcons h3 {
+  font-size: 14px;
+  margin-left: 0.5rem;
+}
+
+.Icon,
+.ProjectIcon i {
+  fill: var(--text);
+  height: 16px;
+}
+
+.React {
+  background-color: #60AFFF;
+}
+
+.CSS {
+  background-color: #677db7;
+}
+
+.HTML {
+  background-color: #E88873;
+}
+
+.TypeScript {
+  background-color: #4392F1;
+}
+
+.NextJS {
+  background-color: #8D818C;
+}
+
+.Nodejs {
+  background-color: #68A063;
+}
+
+.OBS {
+  width: 120px;
+}
+
+.FL2 {
+  opacity: 70%;
+}
+
+.FL1 {
+  opacity: 30%;
+}
+
+@media (min-width: 650px) and (max-width: 800px) {
+  .Subsection {
+    margin-left: 2rem;
+  }
+
+}
+
+@media (max-width: 649px) {
+  .Subsection {
+    margin-left: 2rem;
+  }
+
+  .ProjectDetails {
+    width: 100%;
+  }
+
+  .ProjectIcons {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .Project {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,54 @@
+.Footer {
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: 1.5rem;
+}
+
+.fa-instagram {
+  color: transparent;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.fa-linkedin {
+  color: #0072b1;
+}
+
+.leetcode {
+  margin: 4px auto;
+  width: 24px;
+  fill: #f89f1b;
+}
+
+.Footer a {
+  font-size: 24px;
+}
+
+.Footer div {
+  width: 284px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.fa-spotify {
+  color: #1DB954;
+}
+
+.Footer div {
+  animation: 0.5s slideUp;
+}
+
+@keyframes slideUp {
+  from {
+    translate: 0 60px;
+  }
+
+  to {
+    translate: 0 0;
+  }
+}

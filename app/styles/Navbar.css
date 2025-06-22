@@ -1,0 +1,98 @@
+.Navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100px;
+  animation: 0.5s slideDown;
+}
+
+.NavLinks {
+  display: flex;
+  flex-direction: row;
+  margin: auto 0;
+}
+
+.Title {
+  font-size: 24px;
+  margin: auto 0;
+  width: 110px;
+}
+
+.ChangeMode {
+  margin: auto 0;
+}
+
+.NavLinks a {
+  border-radius: 0.5rem;
+  width: 76px;
+  padding: 0.5rem 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+.fa-sun {
+  font-size: 24px;
+  color: #FFF821;
+  border-radius: 100%;
+  text-align: center;
+}
+
+.fa-moon {
+  font-size: 24px;
+  display: none;
+  border-radius: 100%;
+}
+
+.NDisplay {
+  display: none;
+}
+
+.fa-sun:hover {
+  box-shadow: 0 0 20px -6px #FFF700, 0 0 20px 5px #FFFBAD, 0 0 40px 10px #FFFED9;
+}
+
+.fa-moon:hover {
+  box-shadow: 0 0 60px 20px #111111;
+  background-color: #A0A0A0;
+}
+
+.SlidingBackground {
+  position: relative;
+  background-color: var(--Active);
+  width: 76px;
+  margin-right: -76px;
+  border-radius: 0.5rem;
+  z-index: -10;
+  left: 0px;
+  transition: left 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    translate: 0 -60px;
+  }
+
+  to {
+    translate: 0 0;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 800px) {
+  .Title {
+    font-size: 18px;
+    width: 79px;
+  }
+}
+
+@media (max-width: 374px) {
+  .Title {
+    width: 0px;
+    opacity: 0%;
+  }
+
+  .Navbar {
+    margin-left: 0;
+    width: 100%;
+  }
+}
