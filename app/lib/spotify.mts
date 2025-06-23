@@ -100,10 +100,10 @@ async function saveData(
   const dataToSend = {
     id: uuid,
     data: {
-      Current: current ?? supaData.Current,
-      Artists: artists ?? supaData.Artists,
-      Recent: recent ?? supaData.Recent,
-      Tracks: tracks ?? supaData.Tracks,
+      Current: current !== null ? current : supaData.Current,
+      Artists: artists !== null ? artists : supaData.Artists,
+      Recent: recent !== null ? recent : supaData.Recent,
+      Tracks: tracks !== null ? tracks : supaData.Tracks,
     },
   };
 
@@ -227,7 +227,6 @@ async function getArtistInfo(Artists) {
   }
 
   for (let a = 0, end = data.length; a < end; a++) {
-    //Think about if you want the genre to be there
     let artist: Artist = {
       name: "",
       link: "",
@@ -343,7 +342,6 @@ async function getTrack() {
     return [];
   }
 
-  // currently do 5 think about 10
   const url = new URL(
     "Https://api.spotify.com/v1/me/top/tracks?limit=5&offset=0",
   );

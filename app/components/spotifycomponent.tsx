@@ -47,10 +47,10 @@ export default function Spotify() {
       const results: SpotifyResponse = await response.json();
 
       setData((prev) => ({
-        Current: results.Current ?? prev.Current,
-        Tracks: results.Tracks ?? prev.Tracks,
-        Artists: results.Artists ?? prev.Artists,
-        Recent: results.Recent ?? prev.Recent,
+        Current: results.Current !== null ? results.Current : prev.Current,
+        Tracks: results.Tracks !== null ? results.Tracks : prev.Tracks,
+        Artists: results.Artists !== null ? results.Artists : prev.Artists,
+        Recent: results.Recent !== null ? results.Recent : prev.Recent,
       }));
     } catch (err) {
       console.error("Errors with fetching: ", err);
@@ -67,10 +67,12 @@ export default function Spotify() {
   let mapTracks = (Tracks: Track[]) => {
     return Tracks.map((track, index) => (
       <div className={"SmallerItem Item SmallerItem" + index} key={index}>
-        <img
+        <Image
           alt={"Album Cover"}
           src={track.imageLink}
           className={"SmallerAlbum"}
+          width={48}
+          height={48}
         />
         <div className={"SmallerTrackInfo"}>
           <div className={"SmallerTrackName"}>
@@ -210,6 +212,3 @@ export default function Spotify() {
     </div>
   );
 }
-
-// Potentially add self scrolling text
-// Have an initial animation and then change it

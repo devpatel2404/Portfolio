@@ -28,11 +28,6 @@ export default function RootLayout(
           rel={"stylesheet"}
           href={"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"}
         />
-        <link rel={"preconnect"} href={"https://fonts.googleapis.com"} />
-        <link
-          rel={"preconnect"}
-          href={"https://fonts.gstatic.com"}
-        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -54,8 +49,3 @@ export default function RootLayout(
     </html>
   );
 }
-
-//Do Today:
-//  Dimming Other Elements when one is hovered the others are blurred or the opacity is lower
-//  Adding More To Project Section
-//  Navbar when in light mode the sun appears initially then the moon comes out

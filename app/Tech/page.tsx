@@ -9,6 +9,7 @@ import {
   cibUbuntu,
   cibWebstorm,
 } from "@coreui/icons";
+import Image from "next/image";
 
 export default function Tech() {
   const focused = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -44,7 +45,12 @@ export default function Tech() {
             onMouseEnter={focused}
             onMouseLeave={unfocused}
           >
-            <CIcon icon={cibApple} className={"TechIcon CIcon"} />
+            <CIcon
+              icon={cibApple}
+              className={"TechIcon CIcon"}
+              width={80}
+              height={80}
+            />
             <div className={"ItemText"}>
               <h1 className={"LTitle"}>MacOS</h1>
               <p>
@@ -59,7 +65,12 @@ export default function Tech() {
             onMouseEnter={focused}
             onMouseLeave={unfocused}
           >
-            <CIcon icon={cibUbuntu} className={"TechIcon Ubuntu"} />
+            <CIcon
+              icon={cibUbuntu}
+              className={"TechIcon Ubuntu"}
+              width={80}
+              height={80}
+            />
             <div className={"ItemText"}>
               <h1 className={"LTitle"}>Ubuntu Linux</h1>
               <p>
@@ -82,7 +93,12 @@ export default function Tech() {
               onMouseLeave={unfocused}
             >
               <div className={"DImage"}>
-                <img src={"/Macbook.png"} />
+                <Image
+                  src={"/Macbook.webp"}
+                  alt={"Macbook image."}
+                  width={160}
+                  height={160}
+                />
               </div>
               <div className={"ItemText"}>
                 <h1>MacBook Pro M1 Chip</h1>
@@ -100,7 +116,12 @@ export default function Tech() {
               onMouseLeave={unfocused}
             >
               <div className={"DImage"}>
-                <img src={"/iPad.png"} />
+                <Image
+                  src={"/iPad.webp"}
+                  alt={"Ipad 11in Image."}
+                  height={160}
+                  width={160}
+                />
               </div>
               <div className={"ItemText"}>
                 <h1>Ipad 11&quot; 4th Generation</h1>
@@ -121,7 +142,12 @@ export default function Tech() {
               onMouseLeave={unfocused}
             >
               <div className={"DImage"}>
-                <img src={"/Desktop.png"} />
+                <Image
+                  src={"/Desktop.webp"}
+                  alt={"Image of CyberPowerPC computer"}
+                  width={160}
+                  height={160}
+                />
               </div>
               <div className={"ItemText"}>
                 <h1>CyberPowerPC GXiVR8060A5</h1>
@@ -142,7 +168,12 @@ export default function Tech() {
               onMouseLeave={unfocused}
             >
               <div className={"DImage"}>
-                <img src={"/Mouse.webp"} />
+                <Image
+                  src={"/Mouse.webp"}
+                  alt={"razer-deathadder-v3 mouse"}
+                  width={160}
+                  height={160}
+                />
               </div>
               <div className={"ItemText"}>
                 <h1>Razer DeathAdder v3</h1>
@@ -163,7 +194,12 @@ export default function Tech() {
               onMouseLeave={unfocused}
             >
               <div className={"DImage"}>
-                <img src={"/G513.webp"} />
+                <Image
+                  src={"/G513.webp"}
+                  alt={"Logitech G513 Keyboard."}
+                  width={160}
+                  height={160}
+                />
               </div>
               <div className={"ItemText"}>
                 <h1>Logitech G513 Keyboard</h1>
@@ -184,7 +220,12 @@ export default function Tech() {
               onMouseLeave={unfocused}
             >
               <div className={"DImage"}>
-                <img src={"/headphones.webp"} />
+                <Image
+                  src={"/headphones.webp"}
+                  alt={"Sony WH-1000XM5"}
+                  height={160}
+                  width={160}
+                />
               </div>
               <div className={"ItemText"}>
                 <h1>Sony WH-1000XM5</h1>
@@ -205,7 +246,12 @@ export default function Tech() {
               onMouseLeave={unfocused}
             >
               <div className={"DImage"}>
-                <img src={"/Monitor.png"} />
+                <Image
+                  src={"/Monitor.webp"}
+                  alt={"Samsung ViewFinity."}
+                  width={160}
+                  height={160}
+                />
               </div>
               <div className={"ItemText"}>
                 <h1>Samsung 34&quot; ViewFinity</h1>
@@ -236,6 +282,8 @@ export default function Tech() {
                 stroke="#57A143"
                 transform="matrix(1, 0, 0, 1, 0, 0)"
                 className={"svg"}
+                width={80}
+                height={80}
               >
                 <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                 <g
@@ -266,7 +314,12 @@ export default function Tech() {
               onMouseEnter={focused}
               onMouseLeave={unfocused}
             >
-              <CIcon icon={cibIntellijidea} className={"TechIcon CIcon"} />
+              <CIcon
+                icon={cibIntellijidea}
+                className={"TechIcon CIcon"}
+                width={80}
+                height={80}
+              />
               <div className={"ItemText"}>
                 <h1>Intellij</h1>
                 <p>
@@ -284,7 +337,12 @@ export default function Tech() {
               onMouseEnter={focused}
               onMouseLeave={unfocused}
             >
-              <CIcon icon={cibWebstorm} className={"TechIcon CIcon"} />
+              <CIcon
+                icon={cibWebstorm}
+                className={"TechIcon CIcon"}
+                width={80}
+                height={80}
+              />
               <div className={"ItemText"}>
                 <h1>Webstorm</h1>
                 <p>
@@ -301,7 +359,12 @@ export default function Tech() {
               onMouseEnter={focused}
               onMouseLeave={unfocused}
             >
-              <CIcon icon={cibPostman} className={"TechIcon Postman"} />
+              <CIcon
+                icon={cibPostman}
+                className={"TechIcon Postman"}
+                width={80}
+                height={80}
+              />
               <div className={"ItemText"}>
                 <h1>Postman</h1>
                 <p>
@@ -319,7 +382,13 @@ export default function Tech() {
               onMouseEnter={focused}
               onMouseLeave={unfocused}
             >
-              <img src={"/iterm.svg"} className={"Downloaded"} />
+              <Image
+                src={"/iterm.svg"}
+                className={"Downloaded"}
+                alt={"iTerm2 Icon"}
+                height={100}
+                width={100}
+              />
               <div className={"ItemText"}>
                 <h1>iTerm2</h1>
                 <p>
@@ -336,7 +405,13 @@ export default function Tech() {
               onMouseEnter={focused}
               onMouseLeave={unfocused}
             >
-              <img className={"Downloaded"} src={"/obsidian.svg"} />
+              <Image
+                className={"Downloaded"}
+                src={"/obsidian.svg"}
+                alt={"Obsidian Icon"}
+                width={100}
+                height={100}
+              />
               <div className={"ItemText"}>
                 <h1>Obsidian</h1>
                 <p>
@@ -356,7 +431,13 @@ export default function Tech() {
               onMouseEnter={focused}
               onMouseLeave={unfocused}
             >
-              <img className={"Downloaded"} src={"/AppIcon.png"} />
+              <Image
+                className={"Downloaded"}
+                src={"/AppIcon.webp"}
+                alt={"Aerospace Icon"}
+                height={100}
+                width={100}
+              />
               <div className={"ItemText"}>
                 <h1>Aerospace</h1>
                 <p>
@@ -371,5 +452,3 @@ export default function Tech() {
     </div>
   );
 }
-
-//Only thing to do is for the names of the images to be named better or more professionally

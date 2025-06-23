@@ -2,7 +2,6 @@
 import { ReactElement, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import "../styles/Navbar.css";
-import { log } from "console";
 
 type NavbarProp = {
   page: string;

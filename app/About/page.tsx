@@ -2,7 +2,6 @@
 import CIcon from "@coreui/icons-react";
 import "../styles/About.css";
 import { cibTypescript } from "@coreui/icons";
-import { useState } from "react";
 
 export default function About() {
   const ELevelOne = (e: React.MouseEvent<HTMLDivElement>) => {

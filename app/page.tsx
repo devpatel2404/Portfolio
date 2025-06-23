@@ -1,20 +1,24 @@
 "use client";
-import Image from "next/image";
 import "./styles/Home.css";
 
 export default function Home() {
   return (
     <div className={"Home"}>
-      <Image
-        src={"/hellothere.gif"}
-        alt={"Greetings from Obi-wan Kenobi"}
+      <video
+        width={"764"}
+        height={300}
         className={"Greetings"}
-        width={800}
-        height={347}
-        priority={true}
-      />
+        autoPlay={true}
+        loop={true}
+        muted={true}
+      >
+        <source
+          src={"/hellothere.mp4"}
+          type={"video/mp4"}
+        />
+      </video>
       <h1 className={"BigTitle"}>
-        The millionth Indian you've seen... but the one you'll remember.
+        The billionth Indian you've seen... but the one you'll remember.
       </h1>
       <h1 className={"Quip"}>
         I'm a Computer Science major at Rutgers, coding around the clock — with
@@ -23,5 +27,3 @@ export default function Home() {
     </div>
   );
 }
-
-// Text that has a typing like effect

@@ -43,6 +43,3 @@ export default function Footer() {
     </div>
   );
 }
-
-// Add Animation to the footer
-//
