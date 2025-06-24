@@ -39,7 +39,9 @@ export default function Navbar({ page }: NavbarProp) {
   return (
     <div className={"Navbar"}>
       <h1 className={"Title"}>
-        <Link href={"/"} id={"Home"}>Dev Patel</Link>
+        <Link href={"/"} id={"Home"} aria-label={"Go to home page"}>
+          Dev Patel
+        </Link>
       </h1>
       <div className={"NavLinks"}>
         <div
@@ -51,6 +53,7 @@ export default function Navbar({ page }: NavbarProp) {
           href={"/"}
           className={"Navigation"}
           id={"Home"}
+          aria-label={"Go to home page"}
         >
           Home
         </Link>
@@ -58,6 +61,7 @@ export default function Navbar({ page }: NavbarProp) {
           href={"/About"}
           className={"Navigation"}
           id={"About"}
+          aria-label={"Change current page to About page."}
         >
           About
         </Link>
@@ -65,6 +69,7 @@ export default function Navbar({ page }: NavbarProp) {
           href={"/Tech"}
           className={"Navigation"}
           id={"Tech"}
+          aria-label={"Change to the Tech page."}
         >
           Tech
         </Link>
@@ -75,6 +80,7 @@ export default function Navbar({ page }: NavbarProp) {
           value={"Light"}
           onClick={changeTheme}
           className={theme == "Light" ? "NDisplay" : ""}
+          aria-label={"Change theme to Light Mode"}
         >
           <i className={"fa-solid fa-sun"}></i>
         </button>
@@ -83,6 +89,7 @@ export default function Navbar({ page }: NavbarProp) {
           value={"Dark"}
           onClick={changeTheme}
           className={theme == "Dark" ? "NDisplay" : ""}
+          aria-label={"Change theme to Dark Mode"}
         >
           <i className={"fa-solid fa-moon"}></i>
         </button>

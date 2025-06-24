@@ -22,7 +22,11 @@ export default function Spotify() {
     return artist.map((name, index) => (
       <span key={name}>
         {index != 0 ? ",  " : ""}
-        <a href={artistLink[index]} target={"_blank"}>
+        <a
+          href={artistLink[index]}
+          target={"_blank"}
+          aria-label={"Spotify link for " + artist}
+        >
           <p>
             {name}
           </p>
@@ -77,7 +81,11 @@ export default function Spotify() {
         <div className={"SmallerTrackInfo"}>
           <div className={"SmallerTrackName"}>
             <span>
-              <a href={track.link} target={"_blank"}>
+              <a
+                href={track.link}
+                target={"_blank"}
+                aria-label={"Spotify link for " + track.name}
+              >
                 <h1>{track.name}</h1>
               </a>
             </span>
@@ -88,7 +96,12 @@ export default function Spotify() {
         </div>
         <div className={"SmallerTimeInfo"}>
           <p>{formatDuration(track.duration)}</p>
-          <a href={track.link} target={"_blank"} className={"SmallerLink"}>
+          <a
+            href={track.link}
+            target={"_blank"}
+            className={"SmallerLink"}
+            aria-label={"Spotify link for " + track.name}
+          >
             <i className={"fa-solid fa-circle-play"} />
           </a>
         </div>
@@ -108,13 +121,22 @@ export default function Spotify() {
         />
         <div className={"SmallerArtistInfo"}>
           <span>
-            <a href={artist.link} target={"_blank"}>
+            <a
+              href={artist.link}
+              target={"_blank"}
+              aria-label={"Spotify link for " + artist.name}
+            >
               <h1>{artist.name}</h1>
             </a>
           </span>
         </div>
         <div className={"SmallerTimeInfo"}>
-          <a href={artist.link} target={"_blank"} className={"SmallerLink"}>
+          <a
+            href={artist.link}
+            target={"_blank"}
+            className={"SmallerLink"}
+            aria-label={"Spotify link for " + artist.name}
+          >
             <i className={"fa-solid fa-circle-play"} />
           </a>
         </div>
@@ -134,7 +156,11 @@ export default function Spotify() {
               <div className={"CurrentTrack Item"}>
                 <div className={"CurrentTrackName"}>
                   <span>
-                    <a href={data.Current.link} target={"_blank"}>
+                    <a
+                      href={data.Current.link}
+                      target={"_blank"}
+                      aria-label={"Spotify link for " + data.Current.name}
+                    >
                       <h1 className={"CTN"}>{data.Current.name}</h1>
                     </a>
                   </span>
@@ -145,12 +171,18 @@ export default function Spotify() {
                   width={226}
                   height={226}
                   className={"MainTrackCover"}
+                  priority={true}
+                  placeholder={"blur"}
                 />
                 <div className={"CurrentTrackInfo"}>
                   <div className={"CurrentTrackAlbumArtist"}>
                     <div className={"CurrentAlbum"}>
                       <span>
-                        <a href={data.Current.albumLink} target={"_blank"}>
+                        <a
+                          href={data.Current.albumLink}
+                          target={"_blank"}
+                          aria-label={"Spotify link for " + data.Current.album}
+                        >
                           <h1 className={""}>{data.Current.album}</h1>
                         </a>
                       </span>
@@ -161,7 +193,11 @@ export default function Spotify() {
                   </div>
                   <div className={"CurrentTrackTime"}>
                     <h1>{formatDuration(data.Current.duration)}</h1>
-                    <a href={data.Current.link} target={"_blank"}>
+                    <a
+                      href={data.Current.link}
+                      target={"_blank"}
+                      aria-label={"Spotify link for " + data.Current.name}
+                    >
                       <i className={"fa-solid fa-circle-play"} />
                     </a>
                   </div>

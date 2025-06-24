@@ -85,7 +85,11 @@ export default function Tech() {
       <div className={"TechSection"}>
         <h1 className={"TechTitle TechChangeFocus"}>Workstation</h1>
         <div className={"TechItemContainer"}>
-          <a href={"https://support.apple.com/en-us/111901"} target={"_blank"}>
+          <a
+            href={"https://support.apple.com/en-us/111901"}
+            target={"_blank"}
+            aria-label={"Technical Specification For My Macbook"}
+          >
             <div
               className={"TechItem TechChangeFocus"}
               id={"TC2"}
@@ -98,6 +102,8 @@ export default function Tech() {
                   alt={"Macbook image."}
                   width={160}
                   height={160}
+                  priority={true}
+                  placeholder={"blur"}
                 />
               </div>
               <div className={"ItemText"}>
@@ -108,7 +114,11 @@ export default function Tech() {
               />
             </div>
           </a>
-          <a href={"https://support.apple.com/en-us/111842"} target={"_blank"}>
+          <a
+            href={"https://support.apple.com/en-us/111842"}
+            target={"_blank"}
+            aria-label={"Technical Specification For My Ipad"}
+          >
             <div
               className={"TechItem TechChangeFocus"}
               id={"TC3"}
@@ -134,6 +144,7 @@ export default function Tech() {
           <a
             target={"_blank"}
             href={"https://www.walmart.com/ip/CYBERPOWERPC-Gamer-Xtreme-VR-GXiVR8060A5-Gaming-PC-Intel-i5-8400-2-8GHz-8GB-DDR4-NVIDIA-GeForce-GTX-1060-3GB-120GB-SSD-1TB-HDD-Win10-Home-Black-Deskt/380828801"}
+            aria-label={"Link to buy my current PC"}
           >
             <div
               className={"TechItem TechChangeFocus"}
@@ -160,6 +171,7 @@ export default function Tech() {
           <a
             target={"_blank"}
             href={"https://www.razer.com/gaming-mice/razer-deathadder-v3"}
+            aria-label={"Link to buy DeathAdder"}
           >
             <div
               className={"TechItem TechChangeFocus"}
@@ -186,6 +198,7 @@ export default function Tech() {
           <a
             target={"_blank"}
             href={"https://www.logitechg.com/en-us/products/gaming-keyboards/g513-backlit-mechanical-gaming-keyboard.920-009322.html"}
+            aria-label={"Link to buy Logitech G513"}
           >
             <div
               className="TechItem TechChangeFocus"
@@ -212,6 +225,7 @@ export default function Tech() {
           <a
             target={"_blank"}
             href={"https://electronics.sony.com/audio/headphones/headband/p/wh1000xm5-s"}
+            aria-label={"Link to buy Sony WH-1000XM5"}
           >
             <div
               className={"TechItem TechChangeFocus"}
@@ -238,6 +252,7 @@ export default function Tech() {
           <a
             target={"_blank"}
             href={"https://www.bestbuy.com/site/samsung-34-viewfinity-s5-ultrawide-qhd-100hz-amd-freesync-monitor-with-hdr10-displayport-hdmi-black/6532277.p?skuId=6532277"}
+            aria-label={"Link to buy Samsung ViewFinity UltraWide"}
           >
             <div
               className={"TechItem TechChangeFocus"}
@@ -267,7 +282,11 @@ export default function Tech() {
       <div className={"TechSection"}>
         <h1 className={"TechTitle TechChangeFocus"}>Primary Software</h1>
         <div className={"TechItemContainer"}>
-          <a target={"_blank"} href={"https://neovim.io/"}>
+          <a
+            target={"_blank"}
+            href={"https://neovim.io/"}
+            aria-label={"Neovim website frontpage"}
+          >
             <div
               className={"TechItem TechChangeFocus"}
               id={"TC9"}
@@ -307,7 +326,11 @@ export default function Tech() {
               </div>
             </div>
           </a>
-          <a href={"https://www.jetbrains.com/idea/"} target={"_blank"}>
+          <a
+            href={"https://www.jetbrains.com/idea/"}
+            target={"_blank"}
+            aria-label={"Jetbrains Intellij website"}
+          >
             <div
               className={"TechItem TechChangeFocus"}
               id={"TC10"}
@@ -330,7 +353,11 @@ export default function Tech() {
               </div>
             </div>
           </a>
-          <a href={"https://www.jetbrains.com/webstorm/"} target={"_blank"}>
+          <a
+            href={"https://www.jetbrains.com/webstorm/"}
+            target={"_blank"}
+            aria-label={"Jetbrains Webstorm website"}
+          >
             <div
               className={"TechItem TechChangeFocus"}
               id={"TC11"}
@@ -352,7 +379,11 @@ export default function Tech() {
               </div>
             </div>
           </a>
-          <a href={"https://www.postman.com/"} target={"_blank"}>
+          <a
+            href={"https://www.postman.com/"}
+            target={"_blank"}
+            aria-label={"Postman website"}
+          >
             <div
               className={"TechItem TechChangeFocus"}
               id={"TC12"}
@@ -375,7 +406,11 @@ export default function Tech() {
               </div>
             </div>
           </a>
-          <a href={"https://iterm2.com/index.html"} target={"_blank"}>
+          <a
+            href={"https://iterm2.com/index.html"}
+            target={"_blank"}
+            aria-label={"Iterm2 website"}
+          >
             <div
               className={"TechItem TechChangeFocus"}
               id={"TC13"}
@@ -398,7 +433,11 @@ export default function Tech() {
               </div>
             </div>
           </a>
-          <a href={"https://obsidian.md/"} target={"_blank"}>
+          <a
+            href={"https://obsidian.md/"}
+            target={"_blank"}
+            aria-label={"Obisidian Website"}
+          >
             <div
               className={"TechItem TechChangeFocus"}
               id={"TC14"}
@@ -424,6 +463,7 @@ export default function Tech() {
           <a
             href={"https://github.com/nikitabobko/AeroSpace"}
             target={"_blank"}
+            aria-label={"AeroSpace github repository"}
           >
             <div
               className={"TechItem TechChangeFocus"}
