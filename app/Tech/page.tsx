@@ -104,6 +104,7 @@ export default function Tech() {
                   height={160}
                   priority={true}
                   placeholder={"blur"}
+                  blurDataURL={"/Macbook.webp"}
                 />
               </div>
               <div className={"ItemText"}>

@@ -134,7 +134,7 @@ export default function About() {
             <h1>Walking</h1>
             <p>
               It helps me relieve stress, adds movement to an otherwise
-              sedentary work style, and boosts problem-solving when I'm stuck.
+              sedentary work style, and boosts problem-solving when I am stuck.
             </p>
           </div>
           <div

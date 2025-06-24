@@ -18,10 +18,11 @@ export default function Home() {
         />
       </video>
       <h1 className={"BigTitle"}>
-        The billionth Indian you've seen... but the one you'll remember.
+        The billionth Indian you&apos;ve seen... but the one you&apos;ll
+        remember.
       </h1>
       <h1 className={"Quip"}>
-        I'm a Computer Science major at Rutgers, coding around the clock — with
+        I am a Computer Science major at Rutgers, coding around the clock — with
         just enough time to mix in a little fun.
       </h1>
     </div>
