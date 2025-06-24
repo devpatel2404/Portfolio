@@ -107,6 +107,11 @@ async function saveData(
     },
   };
 
+  console.log("Supabase Data: " + JSON.stringify(supaData));
+  console.log(
+    "Data That will be placed in supabase: " + JSON.stringify(dataToSend.data),
+  );
+
   const res = await supabase.from("spotifydata").upsert([dataToSend]);
 
   if (res.error !== null) {
@@ -365,21 +370,11 @@ async function getTrack() {
 }
 
 export default async function handler(req: Request) {
-  console.log("ClientID: ", clientId);
-  console.log("ClientSecret: ", clientSecret);
-  console.log("RefreshToken: ", refreshtoken);
-  console.log("Code: ", code);
-  console.log("URL: ", url);
-  console.log("Key: ", key);
-  console.log("UUID: ", uuid);
-
   if (accessToken === "") {
     await refreshToken();
   }
 
   const { next_run } = await req.json();
-
-  console.log("Next_run: ", next_run);
 
   const tracks = await getTrack();
   const artists = await getArtist();

@@ -15,7 +15,7 @@
   margin-right: 0.75rem;
 }
 
-.CurrentTrackName {
+.CurrentTrackName h1 {
   font-size: 16px;
   display: inline;
 }
@@ -111,12 +111,9 @@
   cursor: pointer;
 }
 
-.Item {
-  transition: transform 0.3s ease-in-out;
-}
-
-.Spotify .Item:hover {
-  transform: scale(1.02);
+.CurrentTrackContainer:hover,
+.SmallerItem:hover {
+  cursor: pointer;
 }
 
 .Highlight {
@@ -129,7 +126,6 @@
   background-color: var(--SpotifyBackground);
   border-radius: 1rem;
   padding: 0.375rem 1rem;
-  animation: none;
   animation: PushingLeft 0.3s cubic-bezier(0.3, 0.6, 0.8, 1) forwards;
 }
 
@@ -173,10 +169,6 @@
 
 .SmallerAlbum {
   height: 48px;
-}
-
-.SmallerItem:hover {
-  cursor: pointer;
 }
 
 .SpotifyTitle {

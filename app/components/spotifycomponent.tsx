@@ -173,6 +173,7 @@ export default function Spotify() {
                   className={"MainTrackCover"}
                   priority={true}
                   placeholder={"blur"}
+                  blurDataURL={data.Current.imageLink}
                 />
                 <div className={"CurrentTrackInfo"}>
                   <div className={"CurrentTrackAlbumArtist"}>
