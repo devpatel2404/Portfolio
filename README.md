@@ -4,7 +4,10 @@ If you want to see the app visit <a href="https://devspatelportfolio.netlify.app
 
 I’ll be making regular updates as I complete new projects or make improvements to my portfolio.
 
-Built with Next.js and currently hosted on Netlify, this portfolio reflects my commitment to both functionality and design. Originally conceived as a minimalist, one-page layout, the portfolio has evolved over time. I wanted to create a user-friendly experience that allows visitors to easily scroll through the content while still maintaining a clean, professional look, and showcasing my skills. While focusing on a sleek design, I've also incorporated a bit of my personality and humor to make it uniquely mine.
+Built with Next.js and currently hosted on Netlify, this portfolio reflects my commitment to both functionality and design. 
+Originally conceived as a minimalist, one-page layout, the portfolio has evolved over time. 
+I wanted to create a user-friendly experience that allows visitors to easily scroll through the content while still maintaining a clean, professional look, and showcasing my skills.
+While focusing on a sleek design, I've also incorporated a bit of my personality and humor to make it uniquely mine.
 
 What you'll find in my portfolio:
 <ul>
