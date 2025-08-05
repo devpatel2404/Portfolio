@@ -9,6 +9,11 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Dev Patel Portfolio",
   description: "Dev Patel Portfolio",
+  icons: {
+    icon: "favicon.ico",
+    apple: "/icon.png",
+    shortcut: "/icon.png",
+  },
 };
 
 const getNameFromPath = (path: string): string => {
