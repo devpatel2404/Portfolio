@@ -11,11 +11,11 @@ export default function Home() {
         autoPlay={true}
         loop={true}
         muted={true}
+        playsInline={true}
+        controls={false}
       >
-        <source
-          src={"/hellothere.mp4"}
-          type={"video/mp4"}
-        />
+        <source src={"/hellothere.gif"} type={"video/mp4"} />
+        <source src={"/apple.mp4"} type={"video/mp4"} />
       </video>
       <h1 className={"BigTitle"}>
         The billionth Indian you&apos;ve seen... but the one you&apos;ll

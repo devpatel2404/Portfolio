@@ -111,11 +111,6 @@
   cursor: pointer;
 }
 
-.CurrentTrackContainer:hover,
-.SmallerItem:hover {
-  cursor: pointer;
-}
-
 .Highlight {
   color: var(--SpotifyGreen);
 }

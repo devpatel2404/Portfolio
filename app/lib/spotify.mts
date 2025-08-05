@@ -89,13 +89,24 @@ async function saveData(
   tracks: Track[] | null,
 ) {
   if (url === undefined || key === undefined || uuid === undefined) {
-    console.log("Something is incorrectly configured.");
+    console.log("Bad configuration: ", { url, key, uuid });
     return false;
   }
 
   const supabase = createClient(url, key);
-  const supaResponse = await supabase.from("spotifydata").select();
+  const supaResponse = await supabase.from("spotifydata").select().eq(
+    "id",
+    uuid,
+  ).limit(1);
   const supaData: SpotifyResponse = supaResponse.data?.at(0)?.data ?? {};
+
+  if (supaResponse.error) {
+    console.error(
+      "Error when retrieving data: ",
+      supaResponse.error.stack || supaResponse.error,
+    );
+    return false;
+  }
 
   const dataToSend = {
     id: uuid,
@@ -107,10 +118,10 @@ async function saveData(
     },
   };
 
-  console.log("Supabase Data: " + JSON.stringify(supaData));
-  console.log(
-    "Data That will be placed in supabase: " + JSON.stringify(dataToSend.data),
-  );
+  if (dataToSend.data.Current === null) {
+    console.log("No Current the data is: ", JSON.stringify(dataToSend.data));
+    return false;
+  }
 
   const res = await supabase.from("spotifydata").upsert([dataToSend]);
 

@@ -26,7 +26,9 @@ async function dataFromDatabase() {
 
 export default async (request: Request, context: Context) => {
   const data: SpotifyResponse = await dataFromDatabase();
-  console.log(data);
+  if (data.Current === null) {
+    console.log("Cannot Find Current");
+  }
 
   return new Response(JSON.stringify(data), {
     status: 200,
